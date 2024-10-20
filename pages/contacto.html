@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Avances - Avances Instituto Eureka</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        colors: {
+                            primary: '#3B82F6', // Color principal (azul brillante)
+                            secondary: '#F6D13B', // Color complementario (amarillo brillante)
+                            background: '#dddddd', // Color de fondo (gris claro)
+                            darkBackground: '#1F2937', // Fondo oscuro
+                            textDark: '#F9FAFB', // Texto claro para modo oscuro
+                        }
+                    }
+                }
+            }
+        </script>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+        <style>
+            html, body {
+                height: 100%;
+                margin: 0;
+                font-family: 'Roboto', sans-serif;
+            }
+            body {
+                display: flex;
+                flex-direction: column;
+            }
+            main {
+                flex: 1; /* Esto hace que el main ocupe el espacio disponible */
+            }
+        </style>
+    </head>
+    <body class="bg-white text-black">
+        <!-- Responsive Menu -->
+        <header class="text-white p-4 bg-primary">
+            <div class="container mx-auto flex justify-between items-center max-w-4xl">
+                <div class="flex-shrink-0">
+                    <a href="../index.html"><img src="../images/LOGOeureka.png" alt="Logo Instituto Eureka" class="h-12"></a>
+                </div>
+                <nav class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="../index.html" class="block px-3 py-2 rounded-md text-base font-semibold hover:text-white hover:bg-gradient-to-r from-blue-600 to-blue-700  transition-transform transform hover:scale-105 hover:shadow-lg whitespace-nowrap">Inicio</a>
+                        <a href="cursosytutores.html" class="block px-3 py-2 rounded-md text-base font-semibold hover:text-white hover:bg-gradient-to-r from-blue-600 to-blue-700  transition-transform transform hover:scale-105 hover:shadow-lg whitespace-nowrap">Cursos y tutores</a>
+                        <a href="reservas.html" class="block px-3 py-2 rounded-md text-base font-semibold hover:text-white hover:bg-gradient-to-r from-blue-600 to-blue-700  transition-transform transform hover:scale-105 hover:shadow-lg whitespace-nowrap">Reservas</a>
+                        <a href="recursos.html" class="block px-3 py-2 rounded-md text-base font-semibold hover:text-white hover:bg-gradient-to-r from-blue-600 to-blue-700  transition-transform transform hover:scale-105 hover:shadow-lg whitespace-nowrap">Recursos</a>
+                        <a href="foro.html" class="block px-3 py-2 rounded-md text-base font-semibold hover:text-white hover:bg-gradient-to-r from-blue-600 to-blue-700  transition-transform transform hover:scale-105 hover:shadow-lg whitespace-nowrap">Foro de discusión</a>
+                        <a href="contacto.html" class="block px-3 py-2 rounded-md text-base font-semibold hover:text-white hover:bg-gradient-to-r from-blue-600 to-blue-700  transition-transform transform hover:scale-105 hover:shadow-lg whitespace-nowrap">Contacto</a>
+                        <a href="metodopago.html" class="block px-3 py-2 rounded-md text-base font-semibold hover:text-white hover:bg-gradient-to-r from-blue-600 to-blue-700  transition-transform transform hover:scale-105 hover:shadow-lg whitespace-nowrap">Método de Pago</a>
+                    </div>
+                </nav>
+                <button id="menuButton" class="ml-2 inline-flex items-center justify-center p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gray-300 md:hidden" onclick="toggleMobileMenu()">
+                    <svg id="menuIcon" class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </header>
+
+        <nav id="mobile-menu" class="hidden md:hidden bg-gray-700 text-white p-4">
+            <ul class="space-y-2 flex flex-col">
+                <li><a href="../index.html" class="block px-3 py-2 rounded-md text-base font-semibold hover:text-white hover:bg-gradient-to-r from-blue-600 to-blue-700 transition-transform transform hover:scale-105 hover:shadow-lg">Inicio</a></li>
+                <li><a href="cursosytutores.html" class="block px-3 py-2 rounded-md text-base font-semibold hover:text-white hover:bg-gradient-to-r from-blue-600 to-blue-700 transition-transform transform hover:scale-105 hover:shadow-lg">Cursos y tutores</a></li>
+                <li><a href="reservas.html" class="block px-3 py-2 rounded-md text-base font-semibold hover:text-white hover:bg-gradient-to-r from-blue-600 to-blue-700 transition-transform transform hover:scale-105 hover:shadow-lg">Reservas</a></li>
+                <li><a href="recursos.html" class="block px-3 py-2 rounded-md text-base font-semibold hover:text-white hover:bg-gradient-to-r from-blue-600 to-blue-700 transition-transform transform hover:scale-105 hover:shadow-lg">Recursos</a></li>
+                <li><a href="foro.html" class="block px-3 py-2 rounded-md text-base font-semibold hover:text-white hover:bg-gradient-to-r from-blue-600 to-blue-700 transition-transform transform hover:scale-105 hover:shadow-lg">Foro de discusión</a></li>
+                <li><a href="contacto.html" class="block px-3 py-2 rounded-md text-base font-semibold hover:text-white hover:bg-gradient-to-r from-blue-600 to-blue-700 transition-transform transform hover:scale-105 hover:shadow-lg">Contacto</a></li>
+                <li><a href="metodopago.html" class="block px-3 py-2 rounded-md text-base font-semibold hover:text-white hover:bg-gradient-to-r from-blue-600 to-blue-700 transition-transform transform hover:scale-105 hover:shadow-lg">Método de Pago</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <section id="intro" class="rounded-lg lex flex-col justify-center items-center text-center mx-auto mb-8 p-8 w-full max-w-5xl">
+                <h1 class="text-3xl font-bold text-primary mb-4">
+                    Contacto
+                </h1>
+                <section id="intro" class="w-full mb-8 bg-gray-100 rounded-lg shadow-lg flex flex-col justify-center items-center text-center mx-auto mb-8 p-8 w-full max-w-5xl">
+                    <p class="mb-4">
+                        Sitio en construcción
+                      </p>
+                      <!-- <a
+                        href="#"
+                        class="w-[300px] text-center bg-white text-primary block px-4 py-2 rounded-md text-base font-semibold hover:text-white hover:bg-gradient-to-r from-blue-600 to-blue-700 transition-transform transform hover:scale-105 hover:shadow-lg border border-[#3B82F6]" target="_blank" 
+                      >
+                        Ver sitio Instituto Eureka
+                      </a> -->
+                </section>                
+            </section>
+        </main>
+    
+        <!-- Footer -->
+        <footer class="bg-primary text-white font-semibold py-8">
+            <div class="container mx-auto px-6 max-w-4xl">
+                <div class="flex flex-col gap-4 lg:flex-row justify-between text-sm">
+                    <p>14016 - 2024 - 2C - NOCHE</p>
+                    <p>EQUIPO 9</p>
+                    <p>PROFESORA: LITOVICIUS, PATRICIA CARINA</p>
+                    <p>UADE DISEÑO Y DESARROLLO WEB</p>
+                </div>
+                <div class="border-t border-gray-400 mt-4 pt-4 text-sm text-center">
+                    <p>&copy; Derechos reservados - Sitio desarrollado para uso educativo - Diseño y Desarrollo Web - UADE 2024</p>
+                </div>
+            </div>
+        </footer>
+    
+        <script src="../script.js"></script>
+    </body>
+</html>
