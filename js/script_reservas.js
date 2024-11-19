@@ -46,8 +46,7 @@ document.getElementById('reservationForm').addEventListener('submit', function(e
     const date = document.getElementById('date').value;
     const email = document.getElementById('email').value;
 
-    if (!course || !tutor || !date || !email) {
-        // alert('Por favor, complete todos los campos');
+    if (!course || !tutor || !date || !email) {        
         Swal.fire({
             icon: "error",
             title: "",
@@ -55,6 +54,21 @@ document.getElementById('reservationForm').addEventListener('submit', function(e
           });
         return;
     }
+   
+    const fechaSeleccionada = new Date(date); 
+    const fechaActual = new Date();
+    
+    fechaActual.setHours(0, 0, 0, 0);
+
+    if (fechaSeleccionada < fechaActual) {
+        Swal.fire({
+            icon: "error",
+            title: "",
+            text: "La fecha seleccionada no puede ser anterior a la fecha actual",
+        });
+        return;
+    }
+
 
     // Simular el envío de un recordatorio por correo electrónico
     console.log(`Enviando recordatorio a ${email} para la clase de ${course} con ${tutor} el ${date}`);
