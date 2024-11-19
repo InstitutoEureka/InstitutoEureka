@@ -7,19 +7,25 @@ menuButton.addEventListener('click', () => {
     mobileMenu.classList.toggle('hidden');
 });
 
-function highlightActiveLink(linksSelector) {
-    const currentPath = window.location.pathname.split('/').pop() || 'index.html'; // Si está vacío, usar 'index.html'
+function highlightActiveLink(linksSelector, basePath) {
+    let currentPath = window.location.pathname.replace(basePath, '').split('/').pop() || 'index.html';
+
     document.querySelectorAll(linksSelector).forEach(link => {
         const linkHref = link.getAttribute('href');
-        if (linkHref.endsWith(currentPath) || (currentPath === 'index.html' && (linkHref === '/' || linkHref.endsWith('index.html')))) {
+        if (
+            linkHref.endsWith(currentPath) ||
+            (currentPath === 'index.html' && (linkHref === '/' || linkHref.endsWith('index.html')))
+        ) {
             link.classList.add('bg-gradient-to-r', 'from-blue-600', 'to-blue-700', 'text-white', 'scale-105', 'shadow-lg');
         }
     });
 }
 
+const basePath = '/avances-instituto-eureka/';
+
 document.addEventListener('DOMContentLoaded', () => {
-    highlightActiveLink('.nav-link');    
-    highlightActiveLink('.mobile-link');
+    highlightActiveLink('.nav-link', basePath);    // Enlaces para la navegación principal
+    highlightActiveLink('.mobile-link', basePath); // Enlaces para el menú móvil
 });
 
 
