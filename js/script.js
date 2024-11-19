@@ -1,29 +1,27 @@
 // Selección de elementos del DOM
+const htmlElement = document.documentElement;
 const menuButton = document.getElementById('menuButton');
 const mobileMenu = document.getElementById('mobile-menu');
-const htmlElement = document.documentElement;
 
 menuButton.addEventListener('click', () => {
     mobileMenu.classList.toggle('hidden');
 });
 
-document.addEventListener('DOMContentLoaded', () => {
-    const currentPath = window.location.pathname.split('/').pop(); // Obtiene el nombre del archivo actual
-    document.querySelectorAll('.nav-link').forEach(link => {
-        if (link.getAttribute('href').endsWith(currentPath)) {
+function highlightActiveLink(linksSelector) {
+    const currentPath = window.location.pathname.split('/').pop() || 'index.html'; // Si está vacío, usar 'index.html'
+    document.querySelectorAll(linksSelector).forEach(link => {
+        const linkHref = link.getAttribute('href');
+        if (linkHref.endsWith(currentPath) || (currentPath === 'index.html' && (linkHref === '/' || linkHref.endsWith('index.html')))) {
             link.classList.add('bg-gradient-to-r', 'from-blue-600', 'to-blue-700', 'text-white', 'scale-105', 'shadow-lg');
         }
     });
-});
+}
 
 document.addEventListener('DOMContentLoaded', () => {
-    const currentPath = window.location.pathname.split('/').pop(); // Obtiene el nombre del archivo actual
-    document.querySelectorAll('.mobile-link').forEach(link => {
-        if (link.getAttribute('href').endsWith(currentPath)) {
-            link.classList.add('bg-gradient-to-r', 'from-blue-600', 'to-blue-700', 'text-white' , 'shadow-lg');
-        }
-    });
+    highlightActiveLink('.nav-link');    
+    highlightActiveLink('.mobile-link');
 });
+
 
 document.getElementById('calculate-btn').addEventListener('click', function() {
     const numClasses = document.getElementById('num-classes').value;
