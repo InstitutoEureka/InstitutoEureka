@@ -46,9 +46,9 @@ const courses = [
 ];
 
 const tutors = [
-    { id: 1, name: "Dra. Ana Martínez", subject: "Matemáticas", avatar: "/placeholder.svg", rating: 4.9, testimonial: "La Dra. Martínez explica los conceptos más complejos de una manera increíblemente clara. ¡Excelente tutora!" },
-    { id: 2, name: "Dr. Carlos Rodríguez", subject: "Física", avatar: "/placeholder.svg", rating: 4.8, testimonial: "El Dr. Rodríguez tiene una pasión contagiosa por la física. Sus clases son fascinantes y muy informativas." },
-    { id: 3, name: "Ing. Laura Sánchez", subject: "Programación", avatar: "/placeholder.svg", rating: 4.7, testimonial: "Laura tiene una habilidad única para hacer que la programación sea accesible y divertida. Altamente recomendada." },
+    { id: 1, name: "Dra. Ana Martínez", subject: "Matemáticas", avatar: "../images/female.png", rating: 4.9, testimonial: "La Dra. Martínez explica los conceptos más complejos de una manera increíblemente clara. ¡Excelente tutora!" },
+    { id: 2, name: "Dr. Carlos Rodríguez", subject: "Física", avatar: "../images/boy.png", rating: 4.8, testimonial: "El Dr. Rodríguez tiene una pasión contagiosa por la física. Sus clases son fascinantes y muy informativas." },
+    { id: 3, name: "Ing. Laura Sánchez", subject: "Programación", avatar: "../images/tag.png", rating: 4.7, testimonial: "Laura tiene una habilidad única para hacer que la programación sea accesible y divertida. Altamente recomendada." },
 ];
 
 function renderCourses() {

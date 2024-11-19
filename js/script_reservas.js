@@ -47,14 +47,24 @@ document.getElementById('reservationForm').addEventListener('submit', function(e
     const email = document.getElementById('email').value;
 
     if (!course || !tutor || !date || !email) {
-        alert('Por favor, complete todos los campos');
+        // alert('Por favor, complete todos los campos');
+        Swal.fire({
+            icon: "error",
+            title: "",
+            text: "Por favor, complete todos los campos",            
+          });
         return;
     }
 
     // Simular el envío de un recordatorio por correo electrónico
     console.log(`Enviando recordatorio a ${email} para la clase de ${course} con ${tutor} el ${date}`);
 
-    alert('Reserva exitosa. Se ha enviado un recordatorio a su correo electrónico.');
+    Swal.fire({
+        title: "Reserva exitosa!",
+        text: "Se ha enviado un recordatorio a su correo electrónico",
+        icon: "success"
+      });
+    
 
     // Reiniciar el formulario
     this.reset();

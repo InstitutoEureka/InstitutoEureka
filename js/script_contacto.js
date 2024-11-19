@@ -64,7 +64,31 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
     console.log('Formulario enviado:', { name, email, subject, message });
 
     // Simulamos una respuesta exitosa
-    alert('Gracias por tu mensaje. Te contactaremos pronto.');
+    // Swal.fire({
+    //     position: "center",
+    //     icon: "success",
+    //     title: "Gracias por tu mensaje. Te contactaremos pronto.",
+    //     showConfirmButton: false,
+    //     timer: 2500
+    // });
+    Swal.fire({
+        title: "Gracias por tu mensaje. Te contactaremos pronto.",
+        showClass: {
+          popup: `
+            animate__animated
+            animate__fadeInUp
+            animate__faster
+          `
+        },
+        hideClass: {
+          popup: `
+            animate__animated
+            animate__fadeOutDown
+            animate__faster
+          `
+        }
+      });
+    
     this.reset();
 });
 

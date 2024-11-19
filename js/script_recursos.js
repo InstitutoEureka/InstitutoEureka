@@ -27,12 +27,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 const resources = [
-    { id: 1, type: "pdf", name: "Fundamentos de Cálculo", description: "PDF con los conceptos básicos del cálculo diferencial e integral", url: "/recursos/fundamentos-calculo.pdf" },
-    { id: 2, type: "guia", name: "Guía de Estudio: Física Cuántica", description: "Guía completa para el estudio de los principios de la física cuántica", url: "/recursos/guia-fisica-cuantica.pdf" },
-    { id: 3, type: "articulo", name: "Introducción a Machine Learning", description: "Artículo sobre los fundamentos del aprendizaje automático", url: "/recursos/intro-machine-learning.pdf" },
-    { id: 4, type: "pdf", name: "Manual de Programación en Python", description: "PDF con ejemplos y ejercicios de programación en Python", url: "/recursos/manual-python.pdf" },
-    { id: 5, type: "guia", name: "Guía Rápida: Álgebra Lineal", description: "Resumen de los conceptos clave en álgebra lineal", url: "/recursos/guia-algebra-lineal.pdf" },
-    { id: 6, type: "articulo", name: "Avances en Inteligencia Artificial", description: "Artículo sobre los últimos avances en IA y sus aplicaciones", url: "/recursos/avances-ia.pdf" },
+    { id: 1, type: "pdf", name: "Fundamentos de Cálculo", description: "PDF con los conceptos básicos del cálculo diferencial e integral", url: "https://www.google.com/" },
+    { id: 2, type: "guia", name: "Guía de Estudio: Física Cuántica", description: "Guía completa para el estudio de los principios de la física cuántica", url: "https://www.google.com/" },
+    { id: 3, type: "articulo", name: "Introducción a Machine Learning", description: "Artículo sobre los fundamentos del aprendizaje automático", url: "https://www.google.com/" },
+    { id: 4, type: "pdf", name: "Manual de Programación en Python", description: "PDF con ejemplos y ejercicios de programación en Python", url: "https://www.google.com/" },
+    { id: 5, type: "guia", name: "Guía Rápida: Álgebra Lineal", description: "Resumen de los conceptos clave en álgebra lineal", url: "https://www.google.com/" },
+    { id: 6, type: "articulo", name: "Avances en Inteligencia Artificial", description: "Artículo sobre los últimos avances en IA y sus aplicaciones", url: "https://www.google.com/" },
 ];
 
 function getIcon(type) {
@@ -98,26 +98,3 @@ document.querySelectorAll('[data-filter]').forEach(button => {
 // Initial render
 renderResources(resources);
 lucide.createIcons();
-let discussions = [
-    {
-        id: 1,
-        title: "¿Cómo resolver integrales por partes?",
-        author: "Maria García",
-        content: "Estoy teniendo dificultades para entender el método de integración por partes. ¿Alguien podría explicarlo de manera sencilla?",
-        likes: 5,
-        replies: [
-            { id: 1, author: "Prof. Martínez", content: "La integración por partes es una técnica que se usa cuando tienes que integrar el producto de dos funciones. La fórmula básica es: ∫u dv = uv - ∫v du. Primero, identifica qué parte será 'u' y qué parte será 'dv'.", likes: 3 },
-            { id: 2, author: "Carlos Ruiz", content: "Un buen truco para recordar qué elegir como 'u' es LIATE: Logarítmicas, Inversas trigonométricas, Algebraicas, Trigonométricas, Exponenciales. Elige 'u' de izquierda a derecha en esta lista.", likes: 2 }
-        ]
-    },
-    {
-        id: 2,
-        title: "Duda sobre la paradoja del gato de Schrödinger",
-        author: "Luis Hernández",
-        content: "No logro entender completamente la paradoja del gato de Schrödinger. ¿Alguien podría explicarla de forma simple?",
-        likes: 7,
-        replies: [
-            { id: 1, author: "Ana Sánchez", content: "La paradoja del gato de Schrödinger es un experimento mental en física cuántica. Imagina un gato en una caja cerrada con un dispositivo que puede matar al gato basado en un evento cuántico aleatorio. Según la interpretación de Copenhague de la mecánica cuántica, hasta que abramos la caja y observemos, el gato está en un estado de superposición, vivo y muerto al mismo tiempo.", likes: 4 }
-        ]
-    }
-];
