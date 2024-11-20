@@ -65,7 +65,7 @@ function getIcon(type) {
 function renderDiscussions() {
     const container = document.getElementById('discussionsContainer');
     container.innerHTML = discussions.map(discussion => `
-        <div class="bg-white shadow-md rounded-lg overflow-hidden">
+        <div class="bg-white rounded-[10px] transition-all duration-500 ease-[cubic-bezier(0.175, 0.885, 0.32, 1.275)] shadow-[inset_0_-3em_3em_rgba(0,0,0,0.1),_0_0_0_2px_rgb(190,190,190),_0.3em_0.3em_1em_rgba(0,0,0,0.3)] transform ">
             <div class="p-6">
                 <h3 class="text-xl font-semibold mb-2">${discussion.title}</h3>
                 <p class="text-gray-600 mb-4">Por ${discussion.author}</p>

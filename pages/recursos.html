@@ -26,7 +26,7 @@
             <div class="flex-shrink-0">
                 <a href="../index.html"><img src="../images/LOGOeureka.png" alt="Logo Instituto Eureka" class="h-24"></a>
             </div>
-            <nav class="hidden md:block">
+            <nav class="hidden lg:block">
                 <div class="ml-10 flex items-baseline space-x-4">
                     <a href="../index.html" class="mobile-link block px-3 py-2 rounded-md text-base font-semibold transition-transform transform hover:scale-105 hover:shadow-lg hover:bg-gradient-to-r from-blue-600 to-blue-700"
                         :class="{ 'bg-gradient-to-r from-blue-600 to-blue-700 text-white scale-105 shadow-lg': currentPage === 'index.html' }">
@@ -48,6 +48,10 @@
                         :class="{ 'bg-gradient-to-r from-blue-600 to-blue-700 text-white scale-105 shadow-lg': currentPage === 'foro-discusion.html' }">
                         Foro
                     </a>
+                    <a href="metodos-pago.html" class="mobile-link block px-3 py-2 rounded-md text-base font-semibold transition-transform transform hover:scale-105 hover:shadow-lg hover:bg-gradient-to-r from-blue-600 to-blue-700"
+                        :class="{ 'bg-gradient-to-r from-blue-600 to-blue-700 text-white scale-105 shadow-lg': currentPage === 'foro-discusion.html' }">
+                        Pagos
+                    </a>
                     <a href="faq.html" class="mobile-link block px-3 py-2 rounded-md text-base font-semibold transition-transform transform hover:scale-105 hover:shadow-lg hover:bg-gradient-to-r from-blue-600 to-blue-700"
                         :class="{ 'bg-gradient-to-r from-blue-600 to-blue-700 text-white scale-105 shadow-lg': currentPage === 'faq.html' }">
                         FAQ
@@ -58,7 +62,7 @@
                     </a>
                 </div>
             </nav>
-            <button id="menuButton" class="ml-2 inline-flex items-center justify-center p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gray-300 md:hidden" onclick="toggleMobileMenu()">
+            <button id="menuButton" class="ml-2 inline-flex items-center justify-center p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gray-300 lg:hidden" onclick="toggleMobileMenu()">
                 <svg id="menuIcon" class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                 </svg>
@@ -66,7 +70,7 @@
         </div>
     </header>
     
-    <nav id="mobile-menu" class="hidden md:hidden bg-gray-700 text-white p-4">
+    <nav id="mobile-menu" class="hidden lg:hidden bg-gray-700 text-white p-4">
         <ul class="space-y-2 flex flex-col">
             <li>
                 <a href="../index.html" class="mobile-link block px-3 py-2 rounded-md text-base font-semibold transition-transform transform hover:scale-105 hover:shadow-lg hover:bg-gradient-to-r from-blue-600 to-blue-700"
@@ -96,6 +100,12 @@
                 <a href="foro-discusion.html" class="mobile-link block px-3 py-2 rounded-md text-base font-semibold transition-transform transform hover:scale-105 hover:shadow-lg hover:bg-gradient-to-r from-blue-600 to-blue-700"
                     :class="{ 'bg-gradient-to-r from-blue-600 to-blue-700 text-white scale-105 shadow-lg': currentPage === 'foro-discusion.html' }">
                     Foro
+                </a>
+            </li>
+            <li>
+                <a href="metodos-pago.html" class="mobile-link block px-3 py-2 rounded-md text-base font-semibold transition-transform transform hover:scale-105 hover:shadow-lg hover:bg-gradient-to-r from-blue-600 to-blue-700"
+                    :class="{ 'bg-gradient-to-r from-blue-600 to-blue-700 text-white scale-105 shadow-lg': currentPage === 'foro-discusion.html' }">
+                    Pagos
                 </a>
             </li>
             <li>
@@ -131,7 +141,7 @@
         </div>
 
         <div id="resourcesContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <!-- Resources will be dynamically inserted here -->
+            <!-- Recursos -->
         </div>
 
         <p id="noResults" class="text-center text-gray-600 mt-8 hidden">No se encontraron recursos que coincidan con tu búsqueda.</p>

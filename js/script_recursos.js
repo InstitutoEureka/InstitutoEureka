@@ -51,15 +51,15 @@ function getIcon(type) {
 function renderResources(filteredResources) {
     const container = document.getElementById('resourcesContainer');
     container.innerHTML = filteredResources.map(resource => `
-        <div class="bg-white shadow-md rounded-lg overflow-hidden">
-            <div class="p-6">
+        <div class="h-full bg-white rounded-[10px] transition-all duration-500 ease-[cubic-bezier(0.175, 0.885, 0.32, 1.275)] shadow-[inset_0_-3em_3em_rgba(0,0,0,0.1),_0_0_0_2px_rgb(190,190,190),_0.3em_0.3em_1em_rgba(0,0,0,0.3)] transform ">
+            <div class="p-6 h-full w-full flex flex-col justify-between">
                 <div class="flex items-center gap-2 mb-2">
                     ${getIcon(resource.type)}
                     <h3 class="text-xl font-semibold">${resource.name}</h3>
                 </div>
                 <p class="text-gray-600 mb-2">${resource.type.charAt(0).toUpperCase() + resource.type.slice(1)}</p>
                 <p class="mb-4">${resource.description}</p>
-                <a href="${resource.url}" target="_blank" rel="noopener noreferrer" class="block w-full bg-blue-500 text-white text-center py-2 px-4 rounded hover:bg-blue-600 transition duration-300">Descargar</a>
+                <a href="${resource.url}" target="_blank" rel="noopener noreferrer" class=" w-full text-center bg-yellow-400 text-blue-800 block px-4 py-2 rounded-md text-base font-semibold hover:bg-yellow-300 transition-all duration-300 transform hover:scale-105 hover:shadow-lg">Descargar</a>
             </div>
         </div>
     `).join('');

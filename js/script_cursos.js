@@ -54,11 +54,11 @@ const tutors = [
 function renderCourses() {
     const coursesContainer = document.querySelector('#cursos-content > div');
     coursesContainer.innerHTML = courses.map(course => `
-        <div class="bg-white shadow-md rounded-lg p-6">
+        <div class="bg-white rounded-[10px] transition-all duration-500 ease-[cubic-bezier(0.175, 0.885, 0.32, 1.275)] shadow-[inset_0_-3em_3em_rgba(0,0,0,0.1),_0_0_0_2px_rgb(190,190,190),_0.3em_0.3em_1em_rgba(0,0,0,0.3)] p-6 transform">
             <h3 class="text-xl font-semibold mb-2">${course.name}</h3>
             <p class="text-gray-600 mb-4">${course.schedule}</p>
             <p class="mb-4">${course.description}</p>
-            <a href="reservas.html"><button class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">Reservar Clase</button></a>
+            <a href="reservas.html"><button class="bg-[#FFC107] text-gray-900 font-bold py-2 px-6 rounded-full hover:bg-[#FFD54F] transition duration-300">Reservar Clase</button></a>
         </div>
     `).join('');
 }
@@ -66,7 +66,7 @@ function renderCourses() {
 function renderTutors() {
     const tutorsContainer = document.querySelector('#tutores-content > div');
     tutorsContainer.innerHTML = tutors.map(tutor => `
-        <div class="bg-white shadow-md rounded-lg p-6 cursor-pointer" onclick="showTutorDetails(${tutor.id})">
+        <div class="bg-white rounded-[10px] transition-all duration-500 ease-[cubic-bezier(0.175, 0.885, 0.32, 1.275)] shadow-[inset_0_-3em_3em_rgba(0,0,0,0.1),_0_0_0_2px_rgb(190,190,190),_0.3em_0.3em_1em_rgba(0,0,0,0.3)] p-6 transform cursor-pointer" onclick="showTutorDetails(${tutor.id})">
             <div class="flex items-center gap-4 mb-4">
                 <img src="${tutor.avatar}" alt="${tutor.name}" class="w-12 h-12 rounded-full">
                 <div>
